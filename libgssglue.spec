@@ -1,7 +1,7 @@
 %define	name    libgssglue
 %define	version 0.1
 %define	release %mkrel 1
-%define	major   2
+%define	major   1
 %define libname	%mklibname gssglue %{major}
 %define develname	%mklibname gssglue -d
 
@@ -31,6 +31,7 @@ mechanism, to do the work.
 %package -n	%{libname}
 Summary:	A mechanism-switch gssapi library
 Group:		System/Libraries
+Conflicts:	%{mklibname gssapi 2}
 
 %description -n	%{libname}
 libgssapi provides a gssapi interface, but does not implement any
@@ -42,8 +43,12 @@ mechanism, to do the work.
 Summary:	Static library and header files for the libgssapi library
 Group:		Development/C
 Requires:	%{libname} = %{version}
-Provides:	gssglue-devel = %{version}
-Obsoletes:  libgssapi2-devel
+Provides:	%{name}-devel = %{version}-%{release}
+Provides:	gssglue-devel = %{version}-%{release}
+Provides:	gssapi-devel = %{version}-%{release}
+Obsoletes:	libgssapi-devel
+Obsoletes:	gssapi-devel
+Obsoletes:	%{mklibname gssapi 2 -d}
 
 %description -n	%{develname}
 libgssapi provides a gssapi interface, but does not implement any
@@ -58,7 +63,7 @@ header files.
 %setup -q
 
 # lib64 fix
-perl -pi -e "s|/usr/lib|%{_libdir}|g" gssapi_mech.conf
+perl -pi -e "s|/usr/lib|%{_libdir}|g" doc/gssapi_mech.conf
 perl -pi -e "s|/lib/|/%{_lib}/|g" configure*
 
 %build
