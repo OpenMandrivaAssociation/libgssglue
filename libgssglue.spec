@@ -17,7 +17,6 @@ Source0:        http://www.citi.umich.edu/projects/nfsv4/linux/%{name}/%{name}-%
 BuildRequires:	multiarch-utils >= 1.0.3
 %endif
 BuildRequires:	krb5-devel >= 1.3
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 libgssglue provides a gssapi interface, but does not implement any
