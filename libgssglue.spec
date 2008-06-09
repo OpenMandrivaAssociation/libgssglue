@@ -71,9 +71,13 @@ install -d %{buildroot}%{_sysconfdir}
 %multiarch_includes %{buildroot}%{_includedir}/gssglue/gssapi/gssapi.h
 %endif
 
+%if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
+%endif
 
+%if %mdkversion < 200900
 %postun -n %{libname} -p /sbin/ldconfig
+%endif
 
 %clean
 rm -rf %{buildroot}
