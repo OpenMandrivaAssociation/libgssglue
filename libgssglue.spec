@@ -1,6 +1,6 @@
 %define	name    libgssglue
 %define	version 0.1
-%define	release %mkrel 8
+%define	release %mkrel 9
 %define	major   1
 %define libname	%mklibname gssglue %{major}
 %define develname	%mklibname gssglue -d
