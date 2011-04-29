@@ -85,13 +85,11 @@ rm -rf %{buildroot}
 %files -n %{libname}
 %defattr(-,root,root)
 %doc AUTHORS COPYING ChangeLog INSTALL NEWS README
-%{_libdir}/*.so.*
+%{_libdir}/*.so.%{major}*
 
 %files -n %{develname}
 %defattr(-,root,root)
-%if %mdkversion >= 1020
-%multiarch %{multiarch_includedir}/gssglue/gssapi/gssapi.h
-%endif
+%{multiarch_includedir}/gssglue/gssapi/gssapi.h
 %{_includedir}/gssglue/gssapi/gssapi.h
 %{_libdir}/*.so
 %{_libdir}/*.a
