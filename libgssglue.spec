@@ -1,23 +1,16 @@
-%define	name    libgssglue
-%define	version 0.3
-%define	release %mkrel 1
-%define	major   1
+%define	major 1
 %define libname	%mklibname gssglue %{major}
-%define develname	%mklibname gssglue -d
+%define develname %mklibname gssglue -d
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
 Summary:	A mechanism-switch gssapi library
+Name:		libgssglue
+Version:	0.3
+Release:	2
 License:	BSD-like
 Group:		System/Libraries
 URL:		http://www.citi.umich.edu/projects/nfsv4/linux/
 Source0:        http://www.citi.umich.edu/projects/nfsv4/linux/%{name}/%{name}-%{version}.tar.gz
-%if %mdkversion >= 1020
-BuildRequires:	multiarch-utils >= 1.0.3
-%endif
 BuildRequires:	krb5-devel >= 1.3
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 libgssglue provides a gssapi interface, but does not implement any
@@ -38,7 +31,7 @@ mechanism, to do the work.
 %package -n	%{develname}
 Summary:	Static library and header files for the libgssapi library
 Group:		Development/C
-Requires:	%{libname} = %{version}-%{release}
+Requires:	%{libname} >= %{version}-%{release}
 Provides:	gssglue-devel = %{version}-%{release}
 Obsoletes:	%{mklibname gssapi 2 -d}
 
@@ -67,31 +60,17 @@ install -d %{buildroot}%{_sysconfdir}
 
 %makeinstall_std
 
-%if %mdkversion >= 1020
 %multiarch_includes %{buildroot}%{_includedir}/gssglue/gssapi/gssapi.h
-%endif
 
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
-
-%clean
-rm -rf %{buildroot}
+# cleanup
+rm -f %{buildroot}%{_libdir}/*.*a
 
 %files -n %{libname}
-%defattr(-,root,root)
 %doc AUTHORS COPYING ChangeLog INSTALL NEWS README
 %{_libdir}/*.so.%{major}*
 
 %files -n %{develname}
-%defattr(-,root,root)
 %{multiarch_includedir}/gssglue/gssapi/gssapi.h
 %{_includedir}/gssglue/gssapi/gssapi.h
 %{_libdir}/*.so
-%{_libdir}/*.a
-%{_libdir}/*.la
 %{_libdir}/pkgconfig/libgssglue.pc
