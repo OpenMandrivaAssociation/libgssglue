@@ -4,8 +4,8 @@
 
 Summary:	A mechanism-switch gssapi library
 Name:		libgssglue
-Version:	0.3
-Release:	2
+Version:	0.4
+Release:	1
 License:	BSD-like
 Group:		System/Libraries
 URL:		http://www.citi.umich.edu/projects/nfsv4/linux/
