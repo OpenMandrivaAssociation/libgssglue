@@ -1,3 +1,4 @@
+%bcond_without  bootstrap
 %define	major 1
 %define libname	%mklibname gssglue %{major}
 %define develname %mklibname gssglue -d
@@ -52,6 +53,10 @@ perl -pi -e "s|/usr/lib|%{_libdir}|g" doc/gssapi_mech.conf
 %patch0 -p1
 
 %build
+%if %{with bootstrap}
+export ac_cv_func_malloc_0_nonnull=yes
+export ac_cv_func_realloc_0_nonnull=yes
+%endif
 %configure2_5x
 %make
 
