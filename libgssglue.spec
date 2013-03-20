@@ -11,6 +11,7 @@ Group:		System/Libraries
 URL:		http://www.citi.umich.edu/projects/nfsv4/linux/
 Source0:        http://www.citi.umich.edu/projects/nfsv4/linux/%{name}/%{name}-%{version}.tar.gz
 BuildRequires:	krb5-devel >= 1.3
+Patch0:		libgssglue-aarch64.patch
 
 %description
 libgssglue provides a gssapi interface, but does not implement any
@@ -48,6 +49,7 @@ header files.
 %setup -q
 # lib64 fix
 perl -pi -e "s|/usr/lib|%{_libdir}|g" doc/gssapi_mech.conf
+%patch0 -p1
 
 %build
 %configure2_5x
