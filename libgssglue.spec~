@@ -1,5 +1,5 @@
 %bcond_without  bootstrap
-%bcond_with  uclibc
+%bcond_without  uclibc
 %define	major	1
 %define libname	%mklibname gssglue %{major}
 %define devname %mklibname gssglue -d
@@ -51,9 +51,9 @@ Summary:	Development library and header files for the libgssapi library
 Group:		Development/C
 Requires:	%{libname} >= %{version}-%{release}
 Provides:	gssglue-devel = %{version}-%{release}
-%if %{with uclibc}
-Requires:	uclibc-%{libname} = %{EVRD}
-%endif
+#if %{with uclibc}
+#Requires:	uclibc-%{libname} = %{EVRD}
+#endif
 Obsoletes:	%{mklibname gssapi 2 -d}
 
 %description -n	%{devname}
