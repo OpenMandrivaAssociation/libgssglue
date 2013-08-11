@@ -7,7 +7,7 @@
 Summary:	A mechanism-switch gssapi library
 Name:		libgssglue
 Version:	0.4
-Release:	4
+Release:	5
 License:	BSD-like
 Group:		System/Libraries
 Url:		http://www.citi.umich.edu/projects/nfsv4/linux/
@@ -51,9 +51,9 @@ Summary:	Development library and header files for the libgssapi library
 Group:		Development/C
 Requires:	%{libname} >= %{version}-%{release}
 Provides:	gssglue-devel = %{version}-%{release}
-%if %{with uclibc}
-Requires:	uclibc-%{libname} = %{EVRD}
-%endif
+#if %{with uclibc}
+#Requires:	uclibc-%{libname} = %{EVRD}
+#endif
 Obsoletes:	%{mklibname gssapi 2 -d}
 
 %description -n	%{devname}
