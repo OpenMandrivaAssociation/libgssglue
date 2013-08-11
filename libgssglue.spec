@@ -1,5 +1,5 @@
 %bcond_without  bootstrap
-%bcond_with  uclibc
+%bcond_without  uclibc
 %define	major	1
 %define libname	%mklibname gssglue %{major}
 %define devname %mklibname gssglue -d
