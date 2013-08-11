@@ -1,0 +1,724 @@
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.38251
++ umask 022
++ cd /home/bero/abf/libgssglue/BUILD
++ '[' 1 -eq 1 ']'
++ '[' 1 -eq 1 ']'
++ '[' 1 -eq 1 ']'
++ cd /home/bero/abf/libgssglue/BUILD
++ rm -rf libgssglue-0.4
++ /bin/gzip -dc /home/bero/abf/libgssglue/libgssglue-0.4.tar.gz
++ /bin/tar -xf -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd libgssglue-0.4
++ sed -i -e 's|/usr/lib|/usr/lib64|g' doc/gssapi_mech.conf
++ echo 'Patch #0 (libgssglue-aarch64.patch):'
+Patch #0 (libgssglue-aarch64.patch):
++ /bin/cat /home/bero/abf/libgssglue/libgssglue-aarch64.patch
++ /usr/bin/patch --fuzz=0 -s -U -p1
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.38251
++ umask 022
++ cd /home/bero/abf/libgssglue/BUILD
++ cd libgssglue-0.4
++ '[' 1 -eq 1 ']'
++ '[' 1 -eq 1 ']'
++ TOP_DIR=/home/bero/abf/libgssglue/BUILD/libgssglue-0.4
++ CONFIGURE_TOP=..
++ mkdir -p uclibc
++ pushd uclibc
+~/abf/libgssglue/BUILD/libgssglue-0.4/uclibc ~/abf/libgssglue/BUILD/libgssglue-0.4
++ CFLAGS='-O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC'
++ export CFLAGS
++ CXXFLAGS='-O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC'
++ export CXXFLAGS
++ FFLAGS='-O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC'
++ export FFLAGS
++ LDFLAGS=' -Wl,--no-undefined '
++ export LDFLAGS
++ CROSSCOMPILE='--target=x86_64-mandriva-linux-gnu --host=x86_64-mandriva-linux-gnu --build=x86_64-mandriva-linux-gnu'
++ export CROSSCOMPILE
++ CONFIGURE_TOP=..
++ '[' -f ../configure.in -o -f ../configure.ac ']'
++ CONFIGURE_XPATH='--x-includes=/usr/include --x-libraries=/usr/lib64'
++ ../configure --target=x86_64-mandriva-linux-gnu --host=x86_64-mandriva-linux-gnu --build=x86_64-mandriva-linux-gnu --disable-silent-rules --disable-dependency-tracking --disable-rpath --program-prefix= --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64 --libexecdir=/usr/lib64 --localstatedir=/var --sharedstatedir=/usr/com --mandir=/usr/share/man --infodir=/usr/share/info --x-includes=/usr/include --x-libraries=/usr/lib64 --libdir=/usr/uclibc/usr/lib64 --prefix=/usr/uclibc/usr --exec-prefix=/usr/uclibc/usr --bindir=/usr/uclibc/usr/bin --sbindir=/usr/uclibc/usr/sbin CC=uclibc-gcc CXX=uclibc-g++ 'CFLAGS=-O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os' 'CXXFLAGS=-O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os' --disable-static
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-rpath
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... x86_64-mandriva-linux-gnu
+checking host system type... x86_64-mandriva-linux-gnu
+checking how to print strings... printf
+checking for style of include used by make... GNU
+checking for x86_64-mandriva-linux-gnu-gcc... uclibc-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether uclibc-gcc accepts -g... yes
+checking for uclibc-gcc option to accept ISO C89... none needed
+checking dependency style of uclibc-gcc... none
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by uclibc-gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-mandriva-linux-gnu file names to x86_64-mandriva-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-mandriva-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for x86_64-mandriva-linux-gnu-objdump... x86_64-mandriva-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-mandriva-linux-gnu-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-mandriva-linux-gnu-ar... x86_64-mandriva-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-mandriva-linux-gnu-strip... x86_64-mandriva-linux-gnu-strip
+checking for x86_64-mandriva-linux-gnu-ranlib... x86_64-mandriva-linux-gnu-ranlib
+checking command to parse /usr/bin/nm -B output from uclibc-gcc object... ok
+checking for sysroot... no
+checking for x86_64-mandriva-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... uclibc-gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if uclibc-gcc supports -fno-rtti -fno-exceptions... no
+checking for uclibc-gcc option to produce PIC... -fPIC -DPIC
+checking if uclibc-gcc PIC flag -fPIC -DPIC works... yes
+checking if uclibc-gcc static flag -static works... yes
+checking if uclibc-gcc supports -c -o file.o... yes
+checking if uclibc-gcc supports -c -o file.o... (cached) yes
+checking whether the uclibc-gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for x86_64-mandriva-linux-gnu-gcc... (cached) uclibc-gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether uclibc-gcc accepts -g... (cached) yes
+checking for uclibc-gcc option to accept ISO C89... (cached) none needed
+checking dependency style of uclibc-gcc... (cached) none
+checking for x86_64-mandriva-linux-gnu-ranlib... (cached) x86_64-mandriva-linux-gnu-ranlib
+checking for ANSI C header files... (cached) yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for uid_t in sys/types.h... yes
+checking size of short... 2
+checking size of int... 4
+checking size of long... 8
+checking size of size_t... 8
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for working memcmp... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking for memset... yes
+checking for strerror... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating libgssglue.pc
+config.status: creating src/gssglue/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-rpath
++ /usr/bin/make -j12
+Making all in src
+make[1]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc/src'
+Creating gssapi.h
++ mv gss11012 ../src/gssglue/gssapi/gssapi.h
+rm: cannot remove 'gss11012': No such file or directory
+/usr/bin/make  all-am
+make[2]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc/src'
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_accept_sec_context.lo ../../src/g_accept_sec_context.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_acquire_cred.lo ../../src/g_acquire_cred.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_compare_name.lo ../../src/g_compare_name.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_context_time.lo ../../src/g_context_time.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_delete_sec_context.lo ../../src/g_delete_sec_context.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_dsp_name.lo ../../src/g_dsp_name.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_dsp_status.lo ../../src/g_dsp_status.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_dup_name.lo ../../src/g_dup_name.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o gen_oids.lo ../../src/gen_oids.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_exp_name.lo ../../src/g_exp_name.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_exp_sec_context.lo ../../src/g_exp_sec_context.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_glue.lo ../../src/g_glue.c
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_dsp_status.c  -fPIC -DPIC -o .libs/g_dsp_status.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/gen_oids.c  -fPIC -DPIC -o .libs/gen_oids.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_acquire_cred.c  -fPIC -DPIC -o .libs/g_acquire_cred.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_dsp_name.c  -fPIC -DPIC -o .libs/g_dsp_name.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_delete_sec_context.c  -fPIC -DPIC -o .libs/g_delete_sec_context.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_exp_sec_context.c  -fPIC -DPIC -o .libs/g_exp_sec_context.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_exp_name.c  -fPIC -DPIC -o .libs/g_exp_name.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_compare_name.c  -fPIC -DPIC -o .libs/g_compare_name.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_context_time.c  -fPIC -DPIC -o .libs/g_context_time.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_accept_sec_context.c  -fPIC -DPIC -o .libs/g_accept_sec_context.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_glue.c  -fPIC -DPIC -o .libs/g_glue.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_dup_name.c  -fPIC -DPIC -o .libs/g_dup_name.o
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_imp_name.lo ../../src/g_imp_name.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_imp_sec_context.lo ../../src/g_imp_sec_context.c
+../../src/g_acquire_cred.c: In function 'gss_acquire_cred':
+../../src/g_acquire_cred.c:208:2: warning: implicit declaration of function 'generic_gss_copy_oid_set' [-Wimplicit-function-declaration]
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_indicate_mechs.lo ../../src/g_indicate_mechs.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_initialize.lo ../../src/g_initialize.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_init_sec_context.lo ../../src/g_init_sec_context.c
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_imp_name.c  -fPIC -DPIC -o .libs/g_imp_name.o
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_inq_context.lo ../../src/g_inq_context.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_inq_cred.lo ../../src/g_inq_cred.c
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_imp_sec_context.c  -fPIC -DPIC -o .libs/g_imp_sec_context.o
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_inq_names.lo ../../src/g_inq_names.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_mechname.lo ../../src/g_mechname.c
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_indicate_mechs.c  -fPIC -DPIC -o .libs/g_indicate_mechs.o
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_mit_krb5_mech.lo ../../src/g_mit_krb5_mech.c
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_initialize.c  -fPIC -DPIC -o .libs/g_initialize.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_init_sec_context.c  -fPIC -DPIC -o .libs/g_init_sec_context.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_inq_context.c  -fPIC -DPIC -o .libs/g_inq_context.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_inq_cred.c  -fPIC -DPIC -o .libs/g_inq_cred.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_inq_names.c  -fPIC -DPIC -o .libs/g_inq_names.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_mechname.c  -fPIC -DPIC -o .libs/g_mechname.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_mit_krb5_mech.c  -fPIC -DPIC -o .libs/g_mit_krb5_mech.o
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_oid_ops.lo ../../src/g_oid_ops.c
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_oid_ops.c  -fPIC -DPIC -o .libs/g_oid_ops.o
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_process_context.lo ../../src/g_process_context.c
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_process_context.c  -fPIC -DPIC -o .libs/g_process_context.o
+../../src/g_initialize.c: In function 'linux_initialize':
+../../src/g_initialize.c:275:5: warning: implicit declaration of function 'getuid' [-Wimplicit-function-declaration]
+../../src/g_initialize.c:275:5: warning: implicit declaration of function 'geteuid' [-Wimplicit-function-declaration]
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_rel_buffer.lo ../../src/g_rel_buffer.c
+../../src/g_inq_cred.c: In function 'gss_inquire_cred':
+../../src/g_inq_cred.c:161:8: warning: passing argument 3 of 'generic_gss_copy_oid' from incompatible pointer type [enabled by default]
+In file included from ../../src/g_inq_cred.c:29:0:
+../../src/mglueP.h:444:11: note: expected 'struct gss_OID_desc_struct **' but argument is of type 'gss_OID'
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_rel_cred.lo ../../src/g_rel_cred.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_rel_name.lo ../../src/g_rel_name.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_rel_oid_set.lo ../../src/g_rel_oid_set.c
+../../src/g_mit_krb5_mech.c: In function 'internal_krb5_gss_initialize':
+../../src/g_mit_krb5_mech.c:209:1: warning: label 'out' defined but not used [-Wunused-label]
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_seal.lo ../../src/g_seal.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_sign.lo ../../src/g_sign.c
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_rel_buffer.c  -fPIC -DPIC -o .libs/g_rel_buffer.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_rel_cred.c  -fPIC -DPIC -o .libs/g_rel_cred.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_rel_name.c  -fPIC -DPIC -o .libs/g_rel_name.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_rel_oid_set.c  -fPIC -DPIC -o .libs/g_rel_oid_set.o
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o gssd_pname_to_uid.lo ../../src/gssd_pname_to_uid.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_unseal.lo ../../src/g_unseal.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_verify.lo ../../src/g_verify.c
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_seal.c  -fPIC -DPIC -o .libs/g_seal.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_sign.c  -fPIC -DPIC -o .libs/g_sign.o
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o oid_ops.lo ../../src/oid_ops.c
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/gssd_pname_to_uid.c  -fPIC -DPIC -o .libs/gssd_pname_to_uid.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_unseal.c  -fPIC -DPIC -o .libs/g_unseal.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_verify.c  -fPIC -DPIC -o .libs/g_verify.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/oid_ops.c  -fPIC -DPIC -o .libs/oid_ops.o
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_set_allowable_enctypes.lo ../../src/g_set_allowable_enctypes.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_lucid_context.lo ../../src/g_lucid_context.c
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_set_allowable_enctypes.c  -fPIC -DPIC -o .libs/g_set_allowable_enctypes.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_lucid_context.c  -fPIC -DPIC -o .libs/g_lucid_context.o
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_canon_name.lo ../../src/g_canon_name.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_wrap.lo ../../src/g_wrap.c
+../../src/g_unseal.c: In function 'gss_unseal':
+../../src/g_unseal.c:81:11: warning: pointer targets in passing argument 6 of 'mech->gss_unwrap' differ in signedness [-Wpointer-sign]
+../../src/g_unseal.c:81:11: note: expected 'gss_qop_t *' but argument is of type 'int *'
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_unwrap.lo ../../src/g_unwrap.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_get_mic.lo ../../src/g_get_mic.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_verify_mic.lo ../../src/g_verify_mic.c
+/bin/sh ../libtool --tag=CC   --mode=compile uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -c -o g_ccache_name.lo ../../src/g_ccache_name.c
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_canon_name.c  -fPIC -DPIC -o .libs/g_canon_name.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_wrap.c  -fPIC -DPIC -o .libs/g_wrap.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_unwrap.c  -fPIC -DPIC -o .libs/g_unwrap.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_get_mic.c  -fPIC -DPIC -o .libs/g_get_mic.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_verify_mic.c  -fPIC -DPIC -o .libs/g_verify_mic.o
+libtool: compile:  uclibc-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -fno-stack-protector -Os -c ../../src/g_ccache_name.c  -fPIC -DPIC -o .libs/g_ccache_name.o
+../../src/g_verify_mic.c: In function 'gss_verify_mic':
+../../src/g_verify_mic.c:69:11: warning: pointer targets in passing argument 5 of 'mech->gss_verify_mic' differ in signedness [-Wpointer-sign]
+../../src/g_verify_mic.c:69:11: note: expected 'int *' but argument is of type 'gss_qop_t *'
+../../src/g_canon_name.c: In function 'gss_canonicalize_name':
+../../src/g_canon_name.c:125:5: warning: passing argument 2 of '__gss_copy_namebuf' from incompatible pointer type [enabled by default]
+In file included from ../../src/g_canon_name.c:27:0:
+../../src/mglueP.h:428:11: note: expected 'struct gss_buffer_desc_struct **' but argument is of type 'struct gss_buffer_desc *'
+/bin/sh ../libtool --tag=CC   --mode=link uclibc-gcc -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -fno-stack-protector -Os -version-info 1:0:0 -Wl,--version-script,../../src/symbol_versions -Wl,--no-undefined  -o libgssglue.la -rpath /usr/uclibc/usr/lib64 g_accept_sec_context.lo g_acquire_cred.lo g_compare_name.lo g_context_time.lo g_delete_sec_context.lo g_dsp_name.lo g_dsp_status.lo g_dup_name.lo gen_oids.lo g_exp_name.lo g_exp_sec_context.lo g_glue.lo g_imp_name.lo g_imp_sec_context.lo g_indicate_mechs.lo g_initialize.lo g_init_sec_context.lo g_inq_context.lo g_inq_cred.lo g_inq_names.lo g_mechname.lo g_mit_krb5_mech.lo g_oid_ops.lo g_process_context.lo g_rel_buffer.lo g_rel_cred.lo g_rel_name.lo g_rel_oid_set.lo g_seal.lo g_sign.lo gssd_pname_to_uid.lo g_unseal.lo g_verify.lo oid_ops.lo g_set_allowable_enctypes.lo g_lucid_context.lo g_canon_name.lo g_wrap.lo g_unwrap.lo g_get_mic.lo g_verify_mic.lo g_ccache_name.lo -ldl 
+libtool: link: uclibc-gcc -shared  -fPIC -DPIC  .libs/g_accept_sec_context.o .libs/g_acquire_cred.o .libs/g_compare_name.o .libs/g_context_time.o .libs/g_delete_sec_context.o .libs/g_dsp_name.o .libs/g_dsp_status.o .libs/g_dup_name.o .libs/gen_oids.o .libs/g_exp_name.o .libs/g_exp_sec_context.o .libs/g_glue.o .libs/g_imp_name.o .libs/g_imp_sec_context.o .libs/g_indicate_mechs.o .libs/g_initialize.o .libs/g_init_sec_context.o .libs/g_inq_context.o .libs/g_inq_cred.o .libs/g_inq_names.o .libs/g_mechname.o .libs/g_mit_krb5_mech.o .libs/g_oid_ops.o .libs/g_process_context.o .libs/g_rel_buffer.o .libs/g_rel_cred.o .libs/g_rel_name.o .libs/g_rel_oid_set.o .libs/g_seal.o .libs/g_sign.o .libs/gssd_pname_to_uid.o .libs/g_unseal.o .libs/g_verify.o .libs/oid_ops.o .libs/g_set_allowable_enctypes.o .libs/g_lucid_context.o .libs/g_canon_name.o .libs/g_wrap.o .libs/g_unwrap.o .libs/g_get_mic.o .libs/g_verify_mic.o .libs/g_ccache_name.o   -ldl  -O2 -Os -Wl,--version-script -Wl,../../src/symbol_versions -Wl,--no-undefined   -Wl,-soname -Wl,libgssglue.so.1 -o .libs/libgssglue.so.1.0.0
+libtool: link: (cd ".libs" && rm -f "libgssglue.so.1" && ln -s "libgssglue.so.1.0.0" "libgssglue.so.1")
+libtool: link: (cd ".libs" && rm -f "libgssglue.so" && ln -s "libgssglue.so.1.0.0" "libgssglue.so")
+libtool: link: ( cd ".libs" && rm -f "libgssglue.la" && ln -s "../libgssglue.la" "libgssglue.la" )
+make[2]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc/src'
+make[1]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc/src'
+make[1]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc'
+make[1]: Nothing to be done for `all-am'.
+make[1]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc'
++ popd
+~/abf/libgssglue/BUILD/libgssglue-0.4
++ mkdir -p system
++ pushd system
+~/abf/libgssglue/BUILD/libgssglue-0.4/system ~/abf/libgssglue/BUILD/libgssglue-0.4
++ CFLAGS='-O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC'
++ export CFLAGS
++ CXXFLAGS='-O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC'
++ export CXXFLAGS
++ FFLAGS='-O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC'
++ export FFLAGS
++ LDFLAGS=' -Wl,--no-undefined '
++ export LDFLAGS
++ CROSSCOMPILE='--target=x86_64-mandriva-linux-gnu --host=x86_64-mandriva-linux-gnu --build=x86_64-mandriva-linux-gnu'
++ export CROSSCOMPILE
++ CONFIGURE_TOP=..
++ '[' -f ../configure.in -o -f ../configure.ac ']'
++ CONFIGURE_XPATH='--x-includes=/usr/include --x-libraries=/usr/lib64'
++ ../configure --target=x86_64-mandriva-linux-gnu --host=x86_64-mandriva-linux-gnu --build=x86_64-mandriva-linux-gnu --disable-silent-rules --disable-dependency-tracking --disable-rpath --program-prefix= --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64 --libexecdir=/usr/lib64 --localstatedir=/var --sharedstatedir=/usr/com --mandir=/usr/share/man --infodir=/usr/share/info --x-includes=/usr/include --x-libraries=/usr/lib64 --disable-static
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-rpath
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... x86_64-mandriva-linux-gnu
+checking host system type... x86_64-mandriva-linux-gnu
+checking how to print strings... printf
+checking for style of include used by make... GNU
+checking for x86_64-mandriva-linux-gnu-gcc... x86_64-mandriva-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether x86_64-mandriva-linux-gnu-gcc accepts -g... yes
+checking for x86_64-mandriva-linux-gnu-gcc option to accept ISO C89... none needed
+checking dependency style of x86_64-mandriva-linux-gnu-gcc... none
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by x86_64-mandriva-linux-gnu-gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-mandriva-linux-gnu file names to x86_64-mandriva-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-mandriva-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for x86_64-mandriva-linux-gnu-objdump... x86_64-mandriva-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-mandriva-linux-gnu-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-mandriva-linux-gnu-ar... x86_64-mandriva-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-mandriva-linux-gnu-strip... x86_64-mandriva-linux-gnu-strip
+checking for x86_64-mandriva-linux-gnu-ranlib... x86_64-mandriva-linux-gnu-ranlib
+checking command to parse /usr/bin/nm -B output from x86_64-mandriva-linux-gnu-gcc object... ok
+checking for sysroot... no
+checking for x86_64-mandriva-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... x86_64-mandriva-linux-gnu-gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-mandriva-linux-gnu-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-mandriva-linux-gnu-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-mandriva-linux-gnu-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-mandriva-linux-gnu-gcc static flag -static works... yes
+checking if x86_64-mandriva-linux-gnu-gcc supports -c -o file.o... yes
+checking if x86_64-mandriva-linux-gnu-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-mandriva-linux-gnu-gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for x86_64-mandriva-linux-gnu-gcc... (cached) x86_64-mandriva-linux-gnu-gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether x86_64-mandriva-linux-gnu-gcc accepts -g... (cached) yes
+checking for x86_64-mandriva-linux-gnu-gcc option to accept ISO C89... (cached) none needed
+checking dependency style of x86_64-mandriva-linux-gnu-gcc... (cached) none
+checking for x86_64-mandriva-linux-gnu-ranlib... (cached) x86_64-mandriva-linux-gnu-ranlib
+checking for ANSI C header files... (cached) yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for uid_t in sys/types.h... yes
+checking size of short... 2
+checking size of int... 4
+checking size of long... 8
+checking size of size_t... 8
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for working memcmp... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking for memset... yes
+checking for strerror... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating libgssglue.pc
+config.status: creating src/gssglue/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --disable-silent-rules, --disable-rpath
++ /usr/bin/make -j12
+Making all in src
+make[1]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system/src'
+Creating gssapi.h
++ mv gss13681 ../src/gssglue/gssapi/gssapi.h
+rm: cannot remove 'gss13681': No such file or directory
+/usr/bin/make  all-am
+make[2]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system/src'
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_accept_sec_context.lo ../../src/g_accept_sec_context.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_acquire_cred.lo ../../src/g_acquire_cred.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_compare_name.lo ../../src/g_compare_name.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_context_time.lo ../../src/g_context_time.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_delete_sec_context.lo ../../src/g_delete_sec_context.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_dsp_name.lo ../../src/g_dsp_name.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_dsp_status.lo ../../src/g_dsp_status.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_dup_name.lo ../../src/g_dup_name.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o gen_oids.lo ../../src/gen_oids.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_exp_name.lo ../../src/g_exp_name.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_exp_sec_context.lo ../../src/g_exp_sec_context.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_glue.lo ../../src/g_glue.c
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_context_time.c  -fPIC -DPIC -o .libs/g_context_time.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_accept_sec_context.c  -fPIC -DPIC -o .libs/g_accept_sec_context.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_acquire_cred.c  -fPIC -DPIC -o .libs/g_acquire_cred.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_compare_name.c  -fPIC -DPIC -o .libs/g_compare_name.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_dsp_name.c  -fPIC -DPIC -o .libs/g_dsp_name.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_dup_name.c  -fPIC -DPIC -o .libs/g_dup_name.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_exp_name.c  -fPIC -DPIC -o .libs/g_exp_name.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_dsp_status.c  -fPIC -DPIC -o .libs/g_dsp_status.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_exp_sec_context.c  -fPIC -DPIC -o .libs/g_exp_sec_context.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_delete_sec_context.c  -fPIC -DPIC -o .libs/g_delete_sec_context.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/gen_oids.c  -fPIC -DPIC -o .libs/gen_oids.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_glue.c  -fPIC -DPIC -o .libs/g_glue.o
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_imp_name.lo ../../src/g_imp_name.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_imp_sec_context.lo ../../src/g_imp_sec_context.c
+../../src/g_acquire_cred.c: In function 'gss_acquire_cred':
+../../src/g_acquire_cred.c:208:2: warning: implicit declaration of function 'generic_gss_copy_oid_set' [-Wimplicit-function-declaration]
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_indicate_mechs.lo ../../src/g_indicate_mechs.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_initialize.lo ../../src/g_initialize.c
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_imp_sec_context.c  -fPIC -DPIC -o .libs/g_imp_sec_context.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_imp_name.c  -fPIC -DPIC -o .libs/g_imp_name.o
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_init_sec_context.lo ../../src/g_init_sec_context.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_inq_context.lo ../../src/g_inq_context.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_inq_cred.lo ../../src/g_inq_cred.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_inq_names.lo ../../src/g_inq_names.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_mechname.lo ../../src/g_mechname.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_mit_krb5_mech.lo ../../src/g_mit_krb5_mech.c
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_indicate_mechs.c  -fPIC -DPIC -o .libs/g_indicate_mechs.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_initialize.c  -fPIC -DPIC -o .libs/g_initialize.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_inq_context.c  -fPIC -DPIC -o .libs/g_inq_context.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_init_sec_context.c  -fPIC -DPIC -o .libs/g_init_sec_context.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_inq_cred.c  -fPIC -DPIC -o .libs/g_inq_cred.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_mechname.c  -fPIC -DPIC -o .libs/g_mechname.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_inq_names.c  -fPIC -DPIC -o .libs/g_inq_names.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_mit_krb5_mech.c  -fPIC -DPIC -o .libs/g_mit_krb5_mech.o
+../../src/g_initialize.c: In function 'linux_initialize':
+../../src/g_initialize.c:275:5: warning: implicit declaration of function 'getuid' [-Wimplicit-function-declaration]
+../../src/g_initialize.c:275:5: warning: implicit declaration of function 'geteuid' [-Wimplicit-function-declaration]
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_oid_ops.lo ../../src/g_oid_ops.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_process_context.lo ../../src/g_process_context.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_rel_buffer.lo ../../src/g_rel_buffer.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_rel_cred.lo ../../src/g_rel_cred.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_rel_name.lo ../../src/g_rel_name.c
+../../src/g_mit_krb5_mech.c: In function 'internal_krb5_gss_initialize':
+../../src/g_mit_krb5_mech.c:209:1: warning: label 'out' defined but not used [-Wunused-label]
+../../src/g_inq_cred.c: In function 'gss_inquire_cred':
+../../src/g_inq_cred.c:161:8: warning: passing argument 3 of 'generic_gss_copy_oid' from incompatible pointer type [enabled by default]
+In file included from ../../src/g_inq_cred.c:29:0:
+../../src/mglueP.h:444:11: note: expected 'struct gss_OID_desc_struct **' but argument is of type 'gss_OID'
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_rel_buffer.c  -fPIC -DPIC -o .libs/g_rel_buffer.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_oid_ops.c  -fPIC -DPIC -o .libs/g_oid_ops.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_process_context.c  -fPIC -DPIC -o .libs/g_process_context.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_rel_cred.c  -fPIC -DPIC -o .libs/g_rel_cred.o
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_rel_oid_set.lo ../../src/g_rel_oid_set.c
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_rel_name.c  -fPIC -DPIC -o .libs/g_rel_name.o
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_seal.lo ../../src/g_seal.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_sign.lo ../../src/g_sign.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o gssd_pname_to_uid.lo ../../src/gssd_pname_to_uid.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_unseal.lo ../../src/g_unseal.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_verify.lo ../../src/g_verify.c
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_rel_oid_set.c  -fPIC -DPIC -o .libs/g_rel_oid_set.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_seal.c  -fPIC -DPIC -o .libs/g_seal.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/gssd_pname_to_uid.c  -fPIC -DPIC -o .libs/gssd_pname_to_uid.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_unseal.c  -fPIC -DPIC -o .libs/g_unseal.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_sign.c  -fPIC -DPIC -o .libs/g_sign.o
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o oid_ops.lo ../../src/oid_ops.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_set_allowable_enctypes.lo ../../src/g_set_allowable_enctypes.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_lucid_context.lo ../../src/g_lucid_context.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_canon_name.lo ../../src/g_canon_name.c
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_verify.c  -fPIC -DPIC -o .libs/g_verify.o
+../../src/g_unseal.c: In function 'gss_unseal':
+../../src/g_unseal.c:81:11: warning: pointer targets in passing argument 6 of 'mech->gss_unwrap' differ in signedness [-Wpointer-sign]
+../../src/g_unseal.c:81:11: note: expected 'gss_qop_t *' but argument is of type 'int *'
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_wrap.lo ../../src/g_wrap.c
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/oid_ops.c  -fPIC -DPIC -o .libs/oid_ops.o
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_unwrap.lo ../../src/g_unwrap.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_get_mic.lo ../../src/g_get_mic.c
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_set_allowable_enctypes.c  -fPIC -DPIC -o .libs/g_set_allowable_enctypes.o
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_verify_mic.lo ../../src/g_verify_mic.c
+/bin/sh ../libtool --tag=CC   --mode=compile x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue    -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -c -o g_ccache_name.lo ../../src/g_ccache_name.c
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_lucid_context.c  -fPIC -DPIC -o .libs/g_lucid_context.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_canon_name.c  -fPIC -DPIC -o .libs/g_canon_name.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_wrap.c  -fPIC -DPIC -o .libs/g_wrap.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_unwrap.c  -fPIC -DPIC -o .libs/g_unwrap.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_get_mic.c  -fPIC -DPIC -o .libs/g_get_mic.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_ccache_name.c  -fPIC -DPIC -o .libs/g_ccache_name.o
+libtool: compile:  x86_64-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../src -I../src/gssglue -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4 -fPIC -c ../../src/g_verify_mic.c  -fPIC -DPIC -o .libs/g_verify_mic.o
+../../src/g_canon_name.c: In function 'gss_canonicalize_name':
+../../src/g_canon_name.c:125:5: warning: passing argument 2 of '__gss_copy_namebuf' from incompatible pointer type [enabled by default]
+In file included from ../../src/g_canon_name.c:27:0:
+../../src/mglueP.h:428:11: note: expected 'struct gss_buffer_desc_struct **' but argument is of type 'struct gss_buffer_desc *'
+../../src/g_verify_mic.c: In function 'gss_verify_mic':
+../../src/g_verify_mic.c:69:11: warning: pointer targets in passing argument 5 of 'mech->gss_verify_mic' differ in signedness [-Wpointer-sign]
+../../src/g_verify_mic.c:69:11: note: expected 'int *' but argument is of type 'gss_qop_t *'
+/bin/sh ../libtool --tag=CC   --mode=link x86_64-mandriva-linux-gnu-gcc -Wall -O2 -Wa,--compress-debug-sections -gdwarf-4 -fvar-tracking-assignments -frecord-gcc-switches -Wstrict-aliasing=2 -pipe -Wformat -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector --param=ssp-buffer-size=4  -fPIC -version-info 1:0:0 -Wl,--version-script,../../src/symbol_versions -Wl,--no-undefined  -o libgssglue.la -rpath /usr/lib64 g_accept_sec_context.lo g_acquire_cred.lo g_compare_name.lo g_context_time.lo g_delete_sec_context.lo g_dsp_name.lo g_dsp_status.lo g_dup_name.lo gen_oids.lo g_exp_name.lo g_exp_sec_context.lo g_glue.lo g_imp_name.lo g_imp_sec_context.lo g_indicate_mechs.lo g_initialize.lo g_init_sec_context.lo g_inq_context.lo g_inq_cred.lo g_inq_names.lo g_mechname.lo g_mit_krb5_mech.lo g_oid_ops.lo g_process_context.lo g_rel_buffer.lo g_rel_cred.lo g_rel_name.lo g_rel_oid_set.lo g_seal.lo g_sign.lo gssd_pname_to_uid.lo g_unseal.lo g_verify.lo oid_ops.lo g_set_allowable_enctypes.lo g_lucid_context.lo g_canon_name.lo g_wrap.lo g_unwrap.lo g_get_mic.lo g_verify_mic.lo g_ccache_name.lo -ldl 
+libtool: link: x86_64-mandriva-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/g_accept_sec_context.o .libs/g_acquire_cred.o .libs/g_compare_name.o .libs/g_context_time.o .libs/g_delete_sec_context.o .libs/g_dsp_name.o .libs/g_dsp_status.o .libs/g_dup_name.o .libs/gen_oids.o .libs/g_exp_name.o .libs/g_exp_sec_context.o .libs/g_glue.o .libs/g_imp_name.o .libs/g_imp_sec_context.o .libs/g_indicate_mechs.o .libs/g_initialize.o .libs/g_init_sec_context.o .libs/g_inq_context.o .libs/g_inq_cred.o .libs/g_inq_names.o .libs/g_mechname.o .libs/g_mit_krb5_mech.o .libs/g_oid_ops.o .libs/g_process_context.o .libs/g_rel_buffer.o .libs/g_rel_cred.o .libs/g_rel_name.o .libs/g_rel_oid_set.o .libs/g_seal.o .libs/g_sign.o .libs/gssd_pname_to_uid.o .libs/g_unseal.o .libs/g_verify.o .libs/oid_ops.o .libs/g_set_allowable_enctypes.o .libs/g_lucid_context.o .libs/g_canon_name.o .libs/g_wrap.o .libs/g_unwrap.o .libs/g_get_mic.o .libs/g_verify_mic.o .libs/g_ccache_name.o   -ldl  -O2 -Wl,--version-script -Wl,../../src/symbol_versions -Wl,--no-undefined   -Wl,-soname -Wl,libgssglue.so.1 -o .libs/libgssglue.so.1.0.0
+libtool: link: (cd ".libs" && rm -f "libgssglue.so.1" && ln -s "libgssglue.so.1.0.0" "libgssglue.so.1")
+libtool: link: (cd ".libs" && rm -f "libgssglue.so" && ln -s "libgssglue.so.1.0.0" "libgssglue.so")
+libtool: link: ( cd ".libs" && rm -f "libgssglue.la" && ln -s "../libgssglue.la" "libgssglue.la" )
+make[2]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system/src'
+make[1]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system/src'
+make[1]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system'
+make[1]: Nothing to be done for `all-am'.
+make[1]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system'
++ popd
+~/abf/libgssglue/BUILD/libgssglue-0.4
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.50175
++ umask 022
++ cd /home/bero/abf/libgssglue/BUILD
++ /bin/rm -rf /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot
++ /bin/mkdir -p /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot
++ cd libgssglue-0.4
++ '[' 1 -eq 1 ']'
++ make DESTDIR=/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot install -C uclibc
+make: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc'
+Making install in src
+make[1]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc/src'
+make  install-am
+make[2]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc/src'
+make[3]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc/src'
+test -z "/usr/uclibc/usr/lib64" || /bin/mkdir -p "/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/uclibc/usr/lib64"
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libgssglue.la '/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/uclibc/usr/lib64'
+libtool: install: /usr/bin/install -c .libs/libgssglue.so.1.0.0 /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/uclibc/usr/lib64/libgssglue.so.1.0.0
+libtool: install: (cd /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/uclibc/usr/lib64 && { ln -s -f libgssglue.so.1.0.0 libgssglue.so.1 || { rm -f libgssglue.so.1 && ln -s libgssglue.so.1.0.0 libgssglue.so.1; }; })
+libtool: install: (cd /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/uclibc/usr/lib64 && { ln -s -f libgssglue.so.1.0.0 libgssglue.so || { rm -f libgssglue.so && ln -s libgssglue.so.1.0.0 libgssglue.so; }; })
+libtool: install: /usr/bin/install -c .libs/libgssglue.lai /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/uclibc/usr/lib64/libgssglue.la
+libtool: install: warning: remember to run `libtool --finish /usr/uclibc/usr/lib64'
+test -z "/usr/include" || /bin/mkdir -p "/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/include"
+/bin/mkdir -p '/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/include/gssglue/gssapi'
+ /usr/bin/install -c -m 644  gssglue/gssapi/gssapi.h '/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/include/gssglue/gssapi'
+make[3]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc/src'
+make[2]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc/src'
+make[1]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc/src'
+make[1]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc'
+make[2]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc'
+make[2]: Nothing to be done for `install-exec-am'.
+test -z "/usr/uclibc/usr/lib64/pkgconfig" || /bin/mkdir -p "/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/uclibc/usr/lib64/pkgconfig"
+ /usr/bin/install -c -m 644 libgssglue.pc '/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/uclibc/usr/lib64/pkgconfig'
+make[2]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc'
+make[1]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc'
+make: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/uclibc'
++ install -d /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/etc
++ make DESTDIR=/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot install -C system
+make: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system'
+Making install in src
+make[1]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system/src'
+make  install-am
+make[2]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system/src'
+make[3]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system/src'
+test -z "/usr/lib64" || /bin/mkdir -p "/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/lib64"
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libgssglue.la '/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/lib64'
+libtool: install: /usr/bin/install -c .libs/libgssglue.so.1.0.0 /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/lib64/libgssglue.so.1.0.0
+libtool: install: (cd /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/lib64 && { ln -s -f libgssglue.so.1.0.0 libgssglue.so.1 || { rm -f libgssglue.so.1 && ln -s libgssglue.so.1.0.0 libgssglue.so.1; }; })
+libtool: install: (cd /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/lib64 && { ln -s -f libgssglue.so.1.0.0 libgssglue.so || { rm -f libgssglue.so && ln -s libgssglue.so.1.0.0 libgssglue.so; }; })
+libtool: install: /usr/bin/install -c .libs/libgssglue.lai /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/lib64/libgssglue.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib64'
+test -z "/usr/include" || /bin/mkdir -p "/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/include"
+/bin/mkdir -p '/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/include/gssglue/gssapi'
+ /usr/bin/install -c -m 644  gssglue/gssapi/gssapi.h '/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/include/gssglue/gssapi'
+make[3]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system/src'
+make[2]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system/src'
+make[1]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system/src'
+make[1]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system'
+make[2]: Entering directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system'
+make[2]: Nothing to be done for `install-exec-am'.
+test -z "/usr/lib64/pkgconfig" || /bin/mkdir -p "/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/lib64/pkgconfig"
+ /usr/bin/install -c -m 644 libgssglue.pc '/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/lib64/pkgconfig'
+make[2]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system'
+make[1]: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system'
+make: Leaving directory `/home/bero/abf/libgssglue/BUILD/libgssglue-0.4/system'
++ /usr/lib/rpm/mkmultiarch includes /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/include/gssglue/gssapi/gssapi.h
++ rm -f /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/uclibc/usr/lib64/pkgconfig/libgssglue.pc
++ '[' -n '' ']'
++ /usr/share/spec-helper/clean_files
++ '[' -n '' ']'
++ COMPRESS='xz -0f --text'
++ COMPRESS_EXT=.xz
++ /usr/lib/rpm/brp-compress
++ '[' -n '' ']'
++ /usr/share/spec-helper/relink_symlinks
++ '[' -n '' ']'
++ /usr/share/spec-helper/clean_perl
++ '[' -n '' ']'
++ /usr/share/spec-helper/lib_symlinks
++ '[' -n '' ']'
++ /usr/share/spec-helper/gprintify
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_mo
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_xdg
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_file_permissions
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_pamd
++ '[' -n '' ']'
++ /usr/share/spec-helper/remove_info_dir
++ '[' -n '' ']'
++ /usr/share/spec-helper/remove_libtool_files
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_eol
++ '[' -n '' ']'
++ /usr/share/spec-helper/check_elf_files
+Warning: undefined symbols in /usr/uclibc/usr/lib64/libgssglue.so.1.0.0: _dl_loaded_modules(/usr/uclibc/lib64/libc.so.0.9.33) _dl_app_init_array(/usr/uclibc/lib64/libc.so.0.9.33) __tls_get_addr(/usr/uclibc/lib64/libc.so.0.9.33) _dl_app_fini_array(/usr/uclibc/lib64/libc.so.0.9.33) _dl_error_number(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_tls_static_used(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_tls_max_dtv_idx(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_symbol_tables(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_errno(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_loaded_modules(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_tls_dtv_slotinfo_list(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_handles(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_tls_generation(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_debug_addr(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_free_function(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_malloc_function(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_init_static_tls(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_tls_static_nelem(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_pagesize(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_load_shared_library(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_unmap_cache(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_run_init_array(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_protect_relro(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_update_slotinfo(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_free(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_run_fini_array(/usr/uclibc/lib64/libdl.so.0.9.33) __tls_get_addr(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_find_hash(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_map_cache(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_malloc(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_fixup(/usr/uclibc/lib64/libdl.so.0.9.33) _dl_add_to_slotinfo(/usr/uclibc/lib64/libdl.so.0.9.33)
++ '[' -n '' ']'
++ /usr/share/spec-helper/remove_rpath
+/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/uclibc/usr/lib64/libgssglue.so.1.0.0: RUNPATH=/usr/uclibc/lib64:/usr/uclibc/usr/lib64
+/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/uclibc/usr/lib64/libgssglue.so.1.0.0: new RUNPATH: /usr/uclibc/lib64:/usr/uclibc/usr/lib64
+Removed parts of rpath (/usr/uclibc/lib64:/usr/uclibc/usr/lib64) from /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/uclibc/usr/lib64/libgssglue.so.1.0.0, new rpath is /usr/uclibc/lib64:/usr/uclibc/usr/lib64
++ /usr/lib/rpm/find-debuginfo.sh -r /home/bero/abf/libgssglue/BUILD/libgssglue-0.4
+
+extracting debug info from /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/lib64/libgssglue.so.1.0.0
+extracting debug info from /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/uclibc/usr/lib64/libgssglue.so.1.0.0
+symlinked /usr/lib/debug/usr/lib64/libgssglue.so.1.0.0.debug to /usr/lib/debug/usr/lib64/libgssglue.so.debug
+symlinked /usr/lib/debug/usr/lib64/libgssglue.so.1.0.0.debug to /usr/lib/debug/usr/lib64/libgssglue.so.1.debug
+symlinked /usr/lib/debug/usr/uclibc/usr/lib64/libgssglue.so.1.0.0.debug to /usr/lib/debug/usr/uclibc/usr/lib64/libgssglue.so.debug
+symlinked /usr/lib/debug/usr/uclibc/usr/lib64/libgssglue.so.1.0.0.debug to /usr/lib/debug/usr/uclibc/usr/lib64/libgssglue.so.1.debug
+cpio: /builddir/build/BUILD/eglibc-2.17-22064/libc/csu: Cannot stat: No such file or directory
+cpio: /builddir/build/BUILD/uClibc-0.9.33.2: Cannot stat: No such file or directory
+468 blocks
+Processing files: lib64gssglue1-0.4-5.x86_64
+Provides: libgssglue.so.1()(64bit) libgssglue.so.1(HIDDEN)(64bit) libgssglue.so.1(libgssapi_CITI_2)(64bit)
+Requires: libc.so.6()(64bit) libc.so.6(GLIBC_2.14)(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.3)(64bit) libc.so.6(GLIBC_2.3.4)(64bit) libc.so.6(GLIBC_2.4)(64bit) libc.so.6(GLIBC_2.7)(64bit) libdl.so.2()(64bit) libdl.so.2(GLIBC_2.2.5)(64bit)
+Processing files: uclibc-lib64gssglue1-0.4-5.x86_64
+Provides: uClibc(libgssglue.so.1()(64bit)) uClibc(libgssglue.so.1(HIDDEN)(64bit)) uClibc(libgssglue.so.1(libgssapi_CITI_2)(64bit))
+Requires: uClibc(libc.so.0.9.33()(64bit)) uClibc(libdl.so.0.9.33()(64bit))
+Processing files: lib64gssglue-devel-0.4-5.x86_64
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.14090
++ umask 022
++ cd /home/bero/abf/libgssglue/BUILD
++ cd libgssglue-0.4
++ DOCDIR=/home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/share/doc/lib64gssglue-devel
++ export DOCDIR
++ /bin/mkdir -p /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/share/doc/lib64gssglue-devel
++ cp -pr AUTHORS COPYING ChangeLog INSTALL NEWS README /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/share/doc/lib64gssglue-devel
++ '[' -n '' ']'
++ /usr/share/spec-helper/fix_eol /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/share/doc/lib64gssglue-devel
++ '[' -n '' ']'
++ /usr/share/spec-helper/clean_files /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot/usr/share/doc/lib64gssglue-devel
+Provides: devel(libgssglue(64bit)) gssglue-devel = 0.4-5 pkgconfig(libgssglue) = 0.4 uClibc(devel(libgssglue(64bit)))
+Requires: uClibc(devel(libc(64bit))) uClibc(devel(libdl(64bit)))
+Obsoletes: lib64gssapi2-devel
+Processing files: libgssglue-debuginfo-0.4-5.x86_64
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot
+Wrote: /home/bero/abf/libgssglue/RPMS/x86_64/lib64gssglue1-0.4-5-omv2013.0.x86_64.rpm
+Wrote: /home/bero/abf/libgssglue/RPMS/x86_64/uclibc-lib64gssglue1-0.4-5-omv2013.0.x86_64.rpm
+Wrote: /home/bero/abf/libgssglue/RPMS/x86_64/lib64gssglue-devel-0.4-5-omv2013.0.x86_64.rpm
+Wrote: /home/bero/abf/libgssglue/RPMS/x86_64/libgssglue-debuginfo-0.4-5-omv2013.0.x86_64.rpm
+Executing "/usr/bin/rpmlint -T -f /home/bero/abf/libgssglue/libgssglue.rpmlintrc /home/bero/abf/libgssglue/RPMS/x86_64/lib64gssglue1-0.4-5-omv2013.0.x86_64.rpm /home/bero/abf/libgssglue/RPMS/x86_64/uclibc-lib64gssglue1-0.4-5-omv2013.0.x86_64.rpm /home/bero/abf/libgssglue/RPMS/x86_64/lib64gssglue-devel-0.4-5-omv2013.0.x86_64.rpm /home/bero/abf/libgssglue/RPMS/x86_64/libgssglue-debuginfo-0.4-5-omv2013.0.x86_64.rpm":
+lib64gssglue1.x86_64: W: spelling-error Summary(en_US) gssapi -> sapping
+
+lib64gssglue1.x86_64: W: spelling-error %description -l en_US libgssapi -> liberalness
+
+lib64gssglue1.x86_64: W: spelling-error %description -l en_US gssapi -> sapping
+
+uclibc-lib64gssglue1.x86_64: W: spelling-error Summary(en_US) gssapi -> sapping
+
+uclibc-lib64gssglue1.x86_64: W: spelling-error %description -l en_US libgssapi -> liberalness
+
+uclibc-lib64gssglue1.x86_64: W: spelling-error %description -l en_US gssapi -> sapping
+
+lib64gssglue-devel.x86_64: W: spelling-error Summary(en_US) libgssapi -> liberalness
+
+lib64gssglue-devel.x86_64: W: spelling-error %description -l en_US libgssapi -> liberalness
+
+lib64gssglue-devel.x86_64: W: obsolete-not-provided lib64gssapi2-devel
+
+lib64gssglue1.x86_64: W: no-packager-tag
+
+uclibc-lib64gssglue1.x86_64: W: no-packager-tag
+
+lib64gssglue-devel.x86_64: W: no-packager-tag
+
+libgssglue-debuginfo.x86_64: W: no-packager-tag
+
+lib64gssglue1.x86_64: W: no-documentation
+
+uclibc-lib64gssglue1.x86_64: W: no-documentation
+
+lib64gssglue-devel.x86_64: E: no-dependency-on (Badness: 1) lib64gssglue/lib64gssglue-libs/liblib64gssglue
+
+lib64gssglue1.x86_64: W: invalid-license BSD-like
+
+uclibc-lib64gssglue1.x86_64: W: invalid-license BSD-like
+
+lib64gssglue-devel.x86_64: W: invalid-license BSD-like
+
+libgssglue-debuginfo.x86_64: W: invalid-license BSD-like
+
+lib64gssglue-devel.x86_64: W: install-file-in-docs /usr/share/doc/lib64gssglue-devel/INSTALL
+
+4 packages and 0 specfiles checked; 1 errors, 20 warnings.
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.60601
++ umask 022
++ cd /home/bero/abf/libgssglue/BUILD
++ cd libgssglue-0.4
++ /bin/rm -rf /home/bero/abf/libgssglue/BUILDROOT/libgssglue-0.4-5-omv2013.0.x86_64-buildroot

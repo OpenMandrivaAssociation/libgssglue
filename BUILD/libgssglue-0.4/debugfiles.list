@@ -1,0 +1,20 @@
+%dir /usr/lib/debug
+%dir /usr/lib/debug/.build-id
+%dir /usr/lib/debug/.build-id/67
+%dir /usr/lib/debug/.build-id/cd
+%dir /usr/lib/debug/usr
+%dir /usr/lib/debug/usr/lib64
+%dir /usr/lib/debug/usr/uclibc
+%dir /usr/lib/debug/usr/uclibc/usr
+%dir /usr/lib/debug/usr/uclibc/usr/lib64
+/usr/lib/debug/.build-id/67/5818c7da7de6c804ec0da1dd4a45b48be00bd8
+/usr/lib/debug/.build-id/67/5818c7da7de6c804ec0da1dd4a45b48be00bd8.debug
+/usr/lib/debug/.build-id/cd/a7319eeac84e92b920f88742946a888aab7047
+/usr/lib/debug/.build-id/cd/a7319eeac84e92b920f88742946a888aab7047.debug
+/usr/lib/debug/usr/lib64/libgssglue.so.1.0.0.debug
+/usr/lib/debug/usr/lib64/libgssglue.so.1.debug
+/usr/lib/debug/usr/lib64/libgssglue.so.debug
+/usr/lib/debug/usr/uclibc/usr/lib64/libgssglue.so.1.0.0.debug
+/usr/lib/debug/usr/uclibc/usr/lib64/libgssglue.so.1.debug
+/usr/lib/debug/usr/uclibc/usr/lib64/libgssglue.so.debug
+/usr/src/debug/libgssglue-0.4
