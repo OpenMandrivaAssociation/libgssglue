@@ -66,7 +66,7 @@ sed -i -e "s|/usr/lib|%{_libdir}|g" doc/gssapi_mech.conf
 %patch0 -p1
 
 %build
-%if %cross_compiling
+%ifarch %arm
 export ac_cv_func_malloc_0_nonnull=yes
 export ac_cv_func_realloc_0_nonnull=yes
 %endif
