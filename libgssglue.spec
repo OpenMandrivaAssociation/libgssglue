@@ -6,7 +6,7 @@
 Summary:	A mechanism-switch gssapi library
 Name:		libgssglue
 Version:	0.4
-Release:	13
+Release:	14
 License:	BSD-like
 Group:		System/Libraries
 Url:		http://www.citi.umich.edu/projects/nfsv4/linux/
@@ -43,15 +43,25 @@ libgssapi provides a gssapi interface, but does not implement any
 gssapi mechanisms itself; instead it calls other gssapi functions
 (e.g., those provided by MIT Kerberos), depending on the requested
 mechanism, to do the work.
+
+%package -n	uclibc-%{devname}
+Summary:	Development library and header files for the libgssapi library
+Group:		Development/C
+Requires:	uclibc-%{libname} = %{EVRD}
+Requires:	%{devname} = %{EVRD}
+Provides:	uclibc-gssglue-devel = %{EVRD}
+Provides:	uclibc-%{name}-devel = %{EVRD}
+Conflicts:	%{devname} < 0.4-14
+
+%description -n	uclibc-%{devname}
+This package contains the development libgssapi library and its
+header files.
 %endif
 
 %package -n	%{devname}
 Summary:	Development library and header files for the libgssapi library
 Group:		Development/C
 Requires:	%{libname} >= %{version}-%{release}
-%if %{with uclibc}
-Requires:	uclibc-%{libname} >= %{version}-%{release}
-%endif
 Provides:	gssglue-devel = %{version}-%{release}
 Obsoletes:	%{mklibname gssapi 2 -d}
 
@@ -84,7 +94,7 @@ popd
 
 mkdir -p system
 pushd system
-%configure2_5x \
+%configure \
 	--disable-static
 %make
 popd
@@ -107,6 +117,9 @@ rm -f %{buildroot}%{uclibc_root}%{_libdir}/pkgconfig/libgssglue.pc
 %if %{with uclibc}
 %files -n uclibc-%{libname}
 %{uclibc_root}/%{_libdir}/libgssglue.so.%{major}*
+
+%files -n uclibc-%{devname}
+%{uclibc_root}%{_libdir}/*.so
 %endif
 
 %files -n %{devname}
@@ -115,6 +128,3 @@ rm -f %{buildroot}%{uclibc_root}%{_libdir}/pkgconfig/libgssglue.pc
 %{_includedir}/gssglue/gssapi/gssapi.h
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/libgssglue.pc
-%if %{with uclibc}
-%{uclibc_root}%{_libdir}/*.so
-%endif
