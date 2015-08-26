@@ -1,4 +1,4 @@
-%bcond_without  uclibc
+%bcond_with  uclibc
 %define	major	1
 %define libname	%mklibname gssglue %{major}
 %define devname %mklibname gssglue -d
@@ -6,7 +6,7 @@
 Summary:	A mechanism-switch gssapi library
 Name:		libgssglue
 Version:	0.4
-Release:	15
+Release:	16
 License:	BSD-like
 Group:		System/Libraries
 Url:		http://www.citi.umich.edu/projects/nfsv4/linux/
