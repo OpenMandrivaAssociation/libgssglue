@@ -62,8 +62,6 @@ export ac_cv_func_realloc_0_nonnull=yes
 install -d %{buildroot}%{_sysconfdir}
 %makeinstall_std
 
-%multiarch_includes %{buildroot}%{_includedir}/gssglue/gssapi/gssapi.h
-
 rm -f %{buildroot}%{uclibc_root}%{_libdir}/pkgconfig/libgssglue.pc
 
 %files -n %{libname}
@@ -71,7 +69,6 @@ rm -f %{buildroot}%{uclibc_root}%{_libdir}/pkgconfig/libgssglue.pc
 
 %files -n %{devname}
 %doc AUTHORS INSTALL NEWS README
-%{multiarch_includedir}/gssglue/gssapi/gssapi.h
 %{_includedir}/gssglue/gssapi/gssapi.h
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/libgssglue.pc
