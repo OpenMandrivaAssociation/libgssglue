@@ -8,7 +8,7 @@ Version:	0.4
 Release:	20
 License:	BSD-like
 Group:		System/Libraries
-Url:		http://www.citi.umich.edu/projects/nfsv4/linux/
+Url:		https://www.citi.umich.edu/projects/nfsv4/linux/
 Source0:        http://www.citi.umich.edu/projects/nfsv4/linux/%{name}/%{name}-%{version}.tar.gz
 Patch0:		libgssglue-aarch64.patch
 BuildRequires:	krb5-devel >= 1.3
